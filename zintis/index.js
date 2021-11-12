@@ -1,6 +1,7 @@
 const playerInput = document.getElementById("playerInput");
 const wordArea = document.getElementById("wordArea");
-const wordList = ["apple", "banana", "kiwi"];
+var para = "Artificial intelligence, or AI, has enormous potential to change the way NASA’s spacecraft study the universe. But because all machine learning algorithms require training from humans, a recent project asks members of the public to label features of scientific interest in imagery taken by NASA’s Perseverance Mars rover."
+const wordList = para.split(/[ ,]+/)
 let playerWord = "";
 
 playerInput.addEventListener("keyup", function (event) {
@@ -36,3 +37,4 @@ function displayWord(word) {
   li.innerHTML = word;
   wordArea.appendChild(li);
 }
+
