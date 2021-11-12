@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./index.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
     <div class="input-container">
-        <input 
-        class = "input";
-        id = "btn-input";
-        type="text"
-        placeholder = "Type word here."
-        >
+      <form id="form">
         <input
-        type="submit"
-        
-        >
+          class="input"
+          id="btn-input"
+          type="text"
+          placeholder="Type word here."
+        />
+        <input type="submit" id="btn-submit" />
+      </form>
     </div>
-</body>
-<script src="./index.js"></script>
+    <div class="bigContainer">
+      <div class="wordContainer" id="wordContainer"></div>
+    </div>
+  </body>
+  <script src="./index.js"></script>
 </html>
