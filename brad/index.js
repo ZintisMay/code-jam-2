@@ -21,20 +21,21 @@ const wordsInPlay = [];
 
 const wordContainer = document.getElementById("wordContainer");
 const btnInput = document.getElementById("btn-input");
-const btnSubmit = document.getElementById("btn-submit");
-const form = document.getElementById("form");
 let interval = null;
 
-form.addEventListener("submit", function (e) {
+btnInput.addEventListener("keyup", function (e) {
   e.preventDefault();
-  checkForAndRemoveWord();
+  if (e.key === "Enter") {
+  checkForAndRemoveWord(e.target.value);
+  }
 });
+
 
 startGame();
 
-function checkForAndRemoveWord() {
-  let playerWord = btnInput.value;
+function checkForAndRemoveWord(playerWord) {
   let refreshWordList = false;
+
   for (var x = 0; x < wordsInPlay.length; x++) {
     let word = wordsInPlay[x];
     if (playerWord == word) {
@@ -54,11 +55,12 @@ function displayWords() {
   for (let word of wordsInPlay) {
     displaySingleWord(word);
   }
-  function displaySingleWord(word) {
-    let h1 = document.createElement("h1");
-    h1.innerHTML = word;
-    wordContainer.appendChild(h1);
-  }
+}
+
+function displaySingleWord(word) {
+  let h1 = document.createElement("h1");
+  h1.innerHTML = word;
+  wordContainer.appendChild(h1);
 }
 
 function startGame() {
