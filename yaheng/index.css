@@ -1,0 +1,28 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  /* sets 1rem to 1px */
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: tan;
+}
+
+.input {
+  height: 5rem;
+  width: 20rem;
+}
+
+.btn {
+  height: 5rem;
+  width: 10rem;
+}
