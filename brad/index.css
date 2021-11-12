@@ -1,3 +1,21 @@
-body:after{
-    content:"CSS is connected";
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; 
+}
+
+html {
+  font-size: 62.5%; 
+  /* sets 1rem to 1px */
+}
+
+body {
+  box-sizing: border-box; 
+  background-color: aqua;
+}
+
+.input-container {
+    text-align: center;
 }
